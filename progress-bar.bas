@@ -13,21 +13,22 @@ For x = 1 To .Slides.Count
         N = N + 1
     End If
 Next
-    
+
+i = 0
 ' Draw progress bar and label page numbers
 For x = 1 To .Slides.Count
     .Slides(x).Shapes("progress bar").Delete
     If .Slides(x).SlideShowTransition.Hidden = False Then
+        i = i + 1
         Set sld = .Slides(x).Shapes.AddShape(msoShapeRectangle, _
-        0, .PageSetup.SlideHeight - 12, _
-        x * .PageSetup.SlideWidth / .Slides.Count, 12)
+        0, .PageSetup.SlideHeight * (1 - 0.015), _
+        i * .PageSetup.SlideWidth / N, .PageSetup.SlideHeight * 0.015)
         sld.Fill.ForeColor.RGB = RGB(218, 227, 243)
         sld.Line.Visible = False
         sld.Name = "progress bar"
         
-        i = i + 1
         .Slides(x).HeadersFooters.Footer.Visible = True
-        .Slides(x).HeadersFooters.Footer.Text = CStr(i) + "/" + CStr(N)
+        .Slides(x).HeadersFooters.Footer.Text = CStr(i) ' + "/" + CStr(N)
         
     Else
         .Slides(x).HeadersFooters.Footer.Visible = False
