@@ -9,5 +9,6 @@ Macro script for displaying Powerpoint progress bar
 5. Enjoy the progress bar!
 
 ## Configurations
-- The color can be changed by changing the RGB values in [line 26](https://github.com/wei-lingfeng/progress-bar/blob/e20376bf82ccd41b9ce24b163bac0dc83110675e/progress-bar.bas#L26)
-- Page numbers can be hidden by commenting out or delete [line 30-31](https://github.com/wei-lingfeng/progress-bar/blob/e20376bf82ccd41b9ce24b163bac0dc83110675e/progress-bar.bas#L30-L31).
+- The width of the progress bar can be customized by modifying [this line](https://github.com/wei-lingfeng/progress-bar/blob/2a50d884d139771182dd57707dd944a6f37a0555/progress-bar.bas#L9).
+- The color of the progress bar can be customized by modifying the RGB values in [this line](https://github.com/wei-lingfeng/progress-bar/blob/2a50d884d139771182dd57707dd944a6f37a0555/progress-bar.bas#L30).
+- Page numbers can be hidden by commenting out or deleting [these two lines](https://github.com/wei-lingfeng/progress-bar/blob/2a50d884d139771182dd57707dd944a6f37a0555/progress-bar.bas#L34-L35).
